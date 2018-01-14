@@ -24,6 +24,7 @@ group :jekyll_plugins do
   gem "jekyll-gist"
   gem "jekyll-feed", "~> 0.6"
   gem 'hawkins'
+  gem 'jekyll-seo-tag'
 end
 group :development do
     gem 'guard'

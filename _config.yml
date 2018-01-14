@@ -26,5 +26,6 @@ relative_permalinks: false
 plugins:
   - jekyll-archives
   - jekyll-livereload
+  - jekyll-seo-tag
 host: 0.0.0.0
 incremental: true
