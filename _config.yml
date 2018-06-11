@@ -8,6 +8,7 @@ tagline:             ''
 description:         'FangXing'
 url:                 http://fffx.github.io
 baseurl:             ''
+google_analytics: "UA-120686214-1"
 
 # About/contact
 author:
@@ -27,8 +28,6 @@ version:             1.0.0
 github: fffx
 host_ip: "192.168.56.2"
 
-site:
-  google_analytics: "UA-120686214-1"
 
 
 relative_permalinks: false
