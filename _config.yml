@@ -15,6 +15,13 @@ author:
   url:               https://twitter.com/xfangxing
   email:             fangxing204@gmail.com
 
+social:
+    name: Fang Xing
+    links:
+      - https://twitter.com/xfangxing
+      - https://github.com/fffx
+      - https://telegram.me/fangxing
+
 # Custom vars
 version:             1.0.0
 github: fffx
