@@ -4,9 +4,9 @@ title: my ansible notes
 ---
 
 
-### Useful Commands
+### Useful ad-hoc commands
 
-```
+```bash
 # oracle_cloud is a group of servers
 ansible oracle_cloud --list-host
     # -a means --arg
@@ -23,18 +23,20 @@ ansible all -m ping
 ansible ubuntu_utm -m script -a "fix_ripgrep_apt_error.sh"
 
 # use module
-# install chrony by yum 
 ansible oracle_cloud -b -m yum -a "name=chrony state=present"
-# ansible multi -b -m service -a "name=chronyd state=started enabled=yes"
+ansible multi -b -m service -a "name=chronyd state=started enabled=yes"
 ```
 
 ### Role
 
-```
+```yml
 # new role
 ansible-galaxy role init roles/media_server
 
 # import/include role
+- name: import a role
+    import_role: some_role
+    when: should_import
 
 ```
 
@@ -42,7 +44,7 @@ ansible-galaxy role init roles/media_server
 
 ### Debug
 
-```
+```bash
 {% raw %}
 # show variables or message
 - debug: var=ansible_user
@@ -63,26 +65,28 @@ ansible-config dump
 
 - Ask sudo password
 
-```
-ansible-playbook -i inventory my.yml \--extra-vars 'ansible_become_pass=YOUR-PASSWORD-HERE' 
+```bash
+# pass sudo password
+ansible-playbook -i inventory my.yml --extra-vars 'ansible_become_pass=YOUR-PASSWORD-HERE' 
 
-ansible-playbook -i inventory my.yml -kK # -k ask for password# -K ask for become password
+# or use -k ask for password# -K ask for become password
+ansible-playbook -i inventory my.yml -kK
 ```
 
-- faster by enable ssh pipeline
+- make ansible faster by enable ssh pipeline
 
-```
+```bash
 # ~/.ansible.cfg
 [ssh_connection]
 # may comment defaults requiretty option in /etc/sudoer
-spipeling = True
+pipeling = True
 ```
 
 
 
 
 references:
-* https://github.com/ansible/ansible-examples
-* https://github.com/calvinbui/ansible-monorepo
-* https://www.redhat.com/sysadmin/faster-ansible-playbook-execution
-* https://zwischenzugs.com/2021/08/27/five-ansible-techniques-i-wish-id-known-earlier
+* <https://github.com/ansible/ansible-examples>
+* <https://github.com/calvinbui/ansible-monorepo>
+* <https://www.redhat.com/sysadmin/faster-ansible-playbook-execution>
+* <https://zwischenzugs.com/2021/08/27/five-ansible-techniques-i-wish-id-known-earlier>

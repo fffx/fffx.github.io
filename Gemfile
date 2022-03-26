@@ -4,7 +4,7 @@ source "https://rubygems.org"
 # When you want to use a different version, change it below, save the
 # file and run `bundle install`. Run Jekyll with `bundle exec`, like so:
 #
-#     bundle exec jekyll serve
+#     bundle exec jekyll serve --livereload
 #
 # This will help ensure the proper Jekyll version is running.
 # Happy Jekylling!
@@ -15,24 +15,20 @@ gem "jekyll", "~> 3.0"
 
 gem 'kramdown-parser-gfm'
 
+
 # If you want to use GitHub Pages, remove the "gem "jekyll"" above and
 # uncomment the line below. To upgrade, run `bundle update github-pages`.
-# gem "github-pages", group: :jekyll_plugins
+gem "github-pages", group: :jekyll_plugins
 
 # If you have any plugins, put them here!
 group :jekyll_plugins do
-  gem 'jekyll-livereload'
   gem 'jekyll-archives'
   gem "jekyll-gist"
   gem "jekyll-feed", "~> 0.6"
-  gem 'hawkins'
   gem 'jekyll-seo-tag'
 end
 group :development do
     gem 'guard'
-    #gem 'guard-livereload', '~> 2.5'
-    #gem 'guard-jekyll-plus'
-    #gem 'guard-jekyll'
 end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
