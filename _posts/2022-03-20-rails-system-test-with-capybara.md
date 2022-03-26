@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Rails system test with capybara
+date:  2022-03-20
 ---
 
 ### Config capybara download  path

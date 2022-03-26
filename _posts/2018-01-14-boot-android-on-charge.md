@@ -14,10 +14,10 @@ categories: android
 - 然后将红米手机插上usb连接笔记本，然后一直按住音量下键不放，手机间断的震动几次会进入fastboot模式
 - 设置充电启动`fastboot oem off-mode-charge 0`，这里会报错 not support on security, 我猜是没解锁的原因，由于我忘记自己的小米帐号了，也懒得去申请解锁，所以我我打算找找其他方案，先`fastboot continue` 开机再说。
 
-心有不干，电源键坏了实在不方便，于是又再百度搜了下红米note3电源键修复，果然找到了（http://www.miui.com/thread-8784407-1-1.html）， 按照贴主说的拆机，用刀片刮，果然可以了 ：）。
+心有不干，电源键坏了实在不方便，于是又再百度搜了下红米note3电源键修复，果然找到了（<http://www.miui.com/thread-8784407-1-1.html>）， 按照贴主说的拆机，用刀片刮，果然可以了 ：）。
 
 
 
 参考：
-https://stackoverflow.com/questions/26294258/auto-boot-when-wall-charger-is-plugged  
-http://www.miui.com/thread-8784407-1-1.html
+* <https://stackoverflow.com/questions/26294258/auto-boot-when-wall-charger-is-plugged>
+* <http://www.miui.com/thread-8784407-1-1.html>
